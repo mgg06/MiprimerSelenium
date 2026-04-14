@@ -34,8 +34,16 @@ public class LoginTest {
         }
 
         @Test
-        void loginCorrecto() {
-                loginPage.login("standard_user", "secret_sauce");
+        void loginCorrecto() throws InterruptedException {
+
+                loginPage.ingresarUsuario("standard_user");
+                Thread.sleep(2000);
+
+                loginPage.ingresarPassword("secret_sauce");
+                Thread.sleep(2000);
+
+                loginPage.clickLogin();
+                Thread.sleep(2000);
 
                 String urlActual = loginPage.obtenerUrlActual();
 
@@ -44,8 +52,16 @@ public class LoginTest {
         }
 
         @Test
-        void loginIncorrecto() {
-                loginPage.login("standard_user", "clave_mal");
+        void loginIncorrecto() throws InterruptedException {
+
+                loginPage.ingresarUsuario("standard_user");
+                Thread.sleep(2000);
+
+                loginPage.ingresarPassword("clave_mal");
+                Thread.sleep(2000);
+
+                loginPage.clickLogin();
+                Thread.sleep(2000);
 
                 assertTrue(loginPage.errorVisible(),
                         "Debería mostrarse un mensaje de error al fallar el login");

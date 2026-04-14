@@ -30,7 +30,8 @@ public class LoginPage {
     }
 
     public void login(String user, String pass) {
-        ingresarCredenciales(user, pass);
+        ingresarUsuario(user);
+        ingresarPassword(pass);
         clickLogin();
     }
 
@@ -52,5 +53,15 @@ public class LoginPage {
             return driver.findElement(errorMessage).getText();
         }
         return "";
+    }
+
+    public void ingresarUsuario(String user) {
+        driver.findElement(userField).clear();
+        driver.findElement(userField).sendKeys(user);
+    }
+
+    public void ingresarPassword(String pass) {
+        driver.findElement(passField).clear();
+        driver.findElement(passField).sendKeys(pass);
     }
 }
