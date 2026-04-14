@@ -1,6 +1,6 @@
 <div align="center">
 
-# <span style="color: #FF1493;">🎀✨ PROYECTO DE AUTOMATIZACIÓN SÚPER FABULOSO ✨🎀</span>
+# <span style="color: #FF1493;">🎀✨ PROYECTO DE AUTOMATIZACIÓN ✨🎀</span>
 ### <span style="color: #FF69B4;">🌸 Ejercicio Práctico: Login con Selenium y JUnit 5 🌸</span>
 
 #### <span style="color: #FF1493;">Hecho por: Marta González González 👩‍💻</span>
